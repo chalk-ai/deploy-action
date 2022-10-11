@@ -39,5 +39,5 @@ runs:
         client-id: ${{ inputs.client-id }}
         client-secret: ${{ inputs.client-secret }}
         api-host: ${{ inputs.api-host }}
-    - run: chalk apply --force --no-promote=${{ inputs.no-promote }} --await=${{ inputs.await }}
+    - run: chalk apply --force --no-promote=${{ inputs.no-promote }} --await=${{ inputs.await }} --json
       shell: bash
