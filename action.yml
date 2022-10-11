@@ -32,7 +32,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: chalk-ai/cli-action
+    - uses: chalk-ai/cli-action@main
       with:
         version: ${{ inputs.version }}
         environment: ${{ inputs.environment }}
