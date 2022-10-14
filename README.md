@@ -22,7 +22,7 @@ You can also deploy preview urls with this workflow:
 
 ```yaml
 steps:
-- uses: chalk-ai/cli-action@v1
+- uses: chalk-ai/deploy-action@v1
   with:
     no-promote: true
     client-id: ...
