@@ -42,5 +42,5 @@ runs:
         client-id: ${{ inputs.client-id }}
         client-secret: ${{ inputs.client-secret }}
         api-host: ${{ inputs.api-host }}
-    - run: chalk apply --force --no-promote=${{ inputs.no-promote }} --await=${{ inputs.await }} --await=${{ inputs.branch }} --no-spinners
+    - run: chalk apply --force --no-promote=${{ inputs.no-promote }} --await=${{ inputs.await }} --branch=${{ inputs.branch }} --no-spinners
       shell: bash
