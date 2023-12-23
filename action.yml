@@ -1,4 +1,4 @@
-name: Chalk Deploy
+name: Chalk Apply
 description: Deploy to a preview branch or production environment from your GitHub Action.
 author: Chalk
 branding:
