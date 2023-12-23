@@ -11,6 +11,9 @@ inputs:
   client-secret:
     description: 'The client secret to use for requests to Chalk.'
     required: true
+  branch:
+    description: "If deploying to a branch, the name of the branch to use."
+    required: false
   no-promote:
     description: 'By default, Chalk will deploy to your production environment. With no-promote, your pipelines will deploy to a preview environment.'
     default: "false"
@@ -39,5 +42,5 @@ runs:
         client-id: ${{ inputs.client-id }}
         client-secret: ${{ inputs.client-secret }}
         api-host: ${{ inputs.api-host }}
-    - run: chalk apply --force --no-promote=${{ inputs.no-promote }} --await=${{ inputs.await }} --json
+    - run: chalk apply --force --no-promote=${{ inputs.no-promote }} --await=${{ inputs.await }} --branch=${{ inputs.branch }} --no-spinners
       shell: bash
