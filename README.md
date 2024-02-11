@@ -16,7 +16,7 @@ GitHub Actions runners, and will install and expose a specified version of the
 
 ```yaml
 steps:
-- uses: chalk-ai/deploy-action@v1
+- uses: chalk-ai/deploy-action@v2
   with:
     client-id: ...
     client-secret: ...
@@ -26,7 +26,7 @@ You can also deploy to branches with this workflow:
 
 ```yaml
 steps:
-- uses: chalk-ai/deploy-action@v1
+- uses: chalk-ai/deploy-action@v2
   with:
     branch: ${{ GITHUB_REF_NAME }}
     client-id: ...
