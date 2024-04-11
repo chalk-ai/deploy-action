@@ -44,3 +44,10 @@ runs:
         api-host: ${{ inputs.api-host }}
     - run: chalk apply --force --no-promote=${{ inputs.no-promote }} --await=${{ inputs.await }} --branch=${{ inputs.branch }} --no-spinners
       shell: bash
+    - id: deployment_id
+      run: echo "deployment_id=$(echo $DEPLOYMENT_ID)" >> $GITHUB_OUTPUT
+      shell: bash
+outputs:
+  deployment_id:
+    description: "The deployment ID."
+    value: ${{ steps.deployment_id.outputs.deployment_id }}
