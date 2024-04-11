@@ -34,6 +34,8 @@ inputs:
     required: false
 runs:
   using: composite
+  env:
+    DEPLOYMENT_ID:  
   steps:
     - uses: chalk-ai/cli-action@main
       with:
@@ -44,3 +46,6 @@ runs:
         api-host: ${{ inputs.api-host }}
     - run: chalk apply --force --no-promote=${{ inputs.no-promote }} --await=${{ inputs.await }} --branch=${{ inputs.branch }} --no-spinners
       shell: bash
+    - name: Show deploymenT_id
+      id: deployment_id
+      run: echo "$DEPLOYMENT_ID" >> "$GITHUB_OUTPUT"
