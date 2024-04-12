@@ -49,3 +49,4 @@ runs:
       env: 
         DEPLOYMENT_ID: ${{ steps.chalk-apply.outputs.deployment_id }}
       run: echo "deployment_id is $DEPLOYMENT_ID"
+      shell: bash
