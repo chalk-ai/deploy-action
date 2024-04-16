@@ -45,8 +45,7 @@ runs:
     - run: chalk apply --force --no-promote=${{ inputs.no-promote }} --await=${{ inputs.await }} --branch=${{ inputs.branch }} --no-spinners
       shell: bash
       id: chalk-apply
-    - name: github output 
-      env: 
-        DEPLOYMENT_ID: ${{ steps.chalk-apply.outputs.deployment_id }}
-      run: echo "deployment_id is $DEPLOYMENT_ID"
-      shell: bash
+outputs:
+  deployment_id: 
+    description: 'The deployment ID.'
+    value: ${{ steps.chalk-apply.outputs.deployment_id }} 
